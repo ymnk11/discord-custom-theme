@@ -1,0 +1,70 @@
+/* 
+	This UserStyle is a wrapper for midnight-discord by refact0r.
+    
+    Original work:
+
+	MIT License
+
+	Copyright (c) 2025 refact0r
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in all
+	copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	SOFTWARE.
+*/
+
+@import url("https://refact0r.github.io/midnight-discord/build/midnight.css");
+
+/* midnightテーマの設定 */
+body {
+  --gap: 8px;
+  --top-bar-height: var(--gap);
+  --custom-dms-icon: off;
+  --dms-icon-color-before: var(--text-default);
+}
+:root {
+  --colors: off;
+  --border-hover: var(--active);
+}
+
+/* ------------------------------- midnightテーマ向けの変更 ------------------------------- */
+/* 左下のアバターの名前の修正 */
+.panels__5e434 > .container__37e49 > .accountPopoutButtonWrapper__37e49 {
+  border-radius: var(--radius-md);
+  padding-left: 5px;
+}
+
+/* 通知アイコンと検索ボックスの調整 */
+/* 検索ボックスなどの位置の修正 */
+.visual-refresh .toolbar__9293f {
+  padding-right: 0;
+  & > .iconWrapper__9293f:nth-last-of-type(3) {
+    margin-right: 36px;
+  }
+}
+/* テキストチャット */
+.visual-refresh .base__5e434:has(.chat_f75fb0 > .subtitleContainer_f75fb0) .trailing_c38106 {
+  right: 316px;
+}
+/* テキストチャット + スレッド(スプリットビュー)*/
+.visual-refresh .base__5e434:has(.chat_f75fb0.threadSidebarOpen_f75fb0 > .subtitleContainer_f75fb0) .trailing_c38106 {
+  right: 138px;
+}
+/* ボイスチャット */
+.visual-refresh .trailing_c38106 {
+  right: 64px;
+  padding-right: unset;
+}
