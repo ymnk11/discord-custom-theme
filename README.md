@@ -1,5 +1,7 @@
 # discord-custom-theme
 
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](MY.USER.CSS)
+
 ## Installation
 
 1. Install Stylus browser extension
