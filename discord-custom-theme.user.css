@@ -11,7 +11,14 @@
 @var checkbox _delete-chatbox-sticker		"Delete Sticker Button in Chatbox"		1
 @var checkbox _delete-chatbox-app-launcher	"Delete App Launcher Button in Chatbox"	1
 @var checkbox _delete-avatar-decoration		"Delete Avatar Decoration"				1
+@var checkbox _delete-nameplate				"Delete Nameplate"						1
+@var checkbox _delete-profile-effects		"Delete Profile Effects"				1
+@var checkbox _delete-display-name-style	"Delete Display Name Style"				1
 @var checkbox _delete-audio-button-menu		"Delete audioButton menu"				1
+@var checkbox _delete-download-app-button	"Delete Download Apps Button"			1
+@var checkbox _delete-contextmenu-bookmark	"Delete Bookmark Button in Contextmenu"	1
+@var checkbox _delete-contextmenu-apps		"Delete Apps Button in Contextmenu"		1
+@var checkbox _delete-contextmenu-tts		"Delete TTS Button in Contextmenu"		1
 ==/UserStyle== */
 @-moz-document domain("discord.com") {
 	@import url(https://raw.githubusercontent.com/ymnk11/discord-custom-theme/refs/heads/main/module/midnight-discord/midnight-discord.css);
@@ -54,6 +61,51 @@
 		}
 	}
 
+	if _delete-nameplate {
+		/* ネームプレート */
+		.content_d125d2[aria-label="Members"] .nameplated__91a9d > .container_df39b2,
+		.container__4bbc6:has( > .videoContainer__4bbc6) {
+			display: none;
+		}
+	}
+
+	if _delete-profile-effects {
+		/* プロフィールエフェクト */
+		.profileEffects__0dd08 {
+			display: none;
+		}
+	}
+
+	if _delete-display-name-style {
+		/* ディスプレイネームスタイル */
+		.dnsFont__89a31 {
+			font-family: var(--font-display);
+		}
+
+		.showEffect_dfb989.container_dfb989 {
+
+			& .innerContainer_dfb989 {
+				background: unset;
+				color: var(--text-default);
+				background-clip: unset;
+				animation: unset;
+				-webkit-text-fill-color: unset;
+				-webkit-text-stroke-width: unset;
+				-webkit-text-stroke-color: unset;
+				&.underlineOnHover_dfb989:hover {
+					text-decoration: underline;
+					text-decoration-color: var(--text-default);
+				}
+			}
+
+			& .toon_dfb989:before,
+			& .pop_dfb989:before,
+			& .glowContainer_dfb989 {
+				display: none;
+			}
+		}
+	}
+
 	if _delete-audio-button-menu {
 		/* マイクとスピーカーのボタンのメニューを非表示 */
 		.audioButtonParent__5e764 {
@@ -65,6 +117,37 @@
 			[aria-label="Input Options"]) {
 				display: none;
 			}
+		}
+	}
+
+	if _delete-download-app-button {
+		/* ダウンロードアップボタン */
+		.listItem__650eb:has(.circleIconButton__5bc7e[aria-label="Download Apps"]) {
+			display: none;
+		}
+	}
+
+	if _delete-contextmenu-bookmark {
+		/* ブックマークボタン */
+		#message-save-for-later-upsell,
+		#message-actions-save-for-later-upsell {
+			display: none;
+		}
+	}
+
+	if _delete-contextmenu-apps {
+		/* アップボタン */
+		#message-apps,
+		#message-actions-apps {
+			display: none;
+		}
+	}
+
+	if _delete-contextmenu-tts {
+		/* tts*/
+		#message-tts,
+		#message-actions-tts {
+			display: none;
 		}
 	}
 }
