@@ -60,6 +60,7 @@
 @var checkbox 	_delete-contextmenu-apps		"Delete Apps Button in Contextmenu"		1
 @var checkbox 	_delete-contextmenu-tts			"Delete TTS Button in Contextmenu"		1
 
+@var checkbox	_save-eye						"Protects your eyes from flashbangs while the page is loading."	1
 ==/UserStyle== */
 @-moz-document domain("discord.com") {
 	@import url(_flavor);
@@ -70,6 +71,16 @@
 
 	if _BubbleUsernames {
 		@import url(https://raw.githubusercontent.com/yiruzu/vencord-snippets/refs/heads/main/snippets/BubbleUsernames/import.css);
+	}
+
+	if _save-eye {
+		/* フラッシュバン回避 */
+		.app__160d8,
+		#app-mount,
+		body,
+		html {
+			background-color: black !important;
+		}
 	}
 
 	if _delete-chatbox-gift {
