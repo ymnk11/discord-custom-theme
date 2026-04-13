@@ -1,3 +1,28 @@
+/* 
+	midnight-discord by refact0r
+	
+	MIT License
+
+	Copyright (c) 2025 refact0r
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in all
+	copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+	SOFTWARE.
+*/
 /* ==UserStyle==
 @name           discord-custom-theme
 @namespace      github.com/openstyles/stylus
@@ -5,23 +30,39 @@
 @preprocessor 	stylus
 @license		MIT
 
-@var checkbox _server-folder-icon			"Server Folder Icon" 					1
-@var checkbox _BubbleUsernames				"BubbleUsernames by yiruzu"				1
-@var checkbox _delete-chatbox-gift			"Delete Gift Button in Chatbox"			1
-@var checkbox _delete-chatbox-sticker		"Delete Sticker Button in Chatbox"		1
-@var checkbox _delete-chatbox-app-launcher	"Delete App Launcher Button in Chatbox"	1
-@var checkbox _delete-avatar-decoration		"Delete Avatar Decoration"				1
-@var checkbox _delete-nameplate				"Delete Nameplate"						1
-@var checkbox _delete-profile-effects		"Delete Profile Effects"				1
-@var checkbox _delete-display-name-style	"Delete Display Name Style"				1
-@var checkbox _delete-audio-button-menu		"Delete audioButton menu"				1
-@var checkbox _delete-download-app-button	"Delete Download Apps Button"			1
-@var checkbox _delete-contextmenu-bookmark	"Delete Bookmark Button in Contextmenu"	1
-@var checkbox _delete-contextmenu-apps		"Delete Apps Button in Contextmenu"		1
-@var checkbox _delete-contextmenu-tts		"Delete TTS Button in Contextmenu"		1
+@var select		_flavor							"Select Flavor" {
+	"Simple by ymnk11"								: 	"'https://raw.githubusercontent.com/ymnk11/discord-custom-theme/refs/heads/main/module/midnight-discord/midnight-discord.css'",
+	"background from midnight-discord"				:	"'https://raw.githubusercontent.com/refact0r/midnight-discord/refs/heads/master/themes/flavors/midnight-background.theme.css'",
+	"catppuccin mocha from midnight-discord"		:	"'https://raw.githubusercontent.com/refact0r/midnight-discord/refs/heads/master/themes/flavors/midnight-catppuccin-mocha.theme.css'",
+	"catppuccin macchiato from midnight-discord"	:	"'https://raw.githubusercontent.com/refact0r/midnight-discord/refs/heads/master/themes/flavors/midnight-catppuccin-macchiato.theme.css'",
+	"nord from midnight-discord"					:	"'https://raw.githubusercontent.com/refact0r/midnight-discord/refs/heads/master/themes/flavors/midnight-nord.theme.css'",
+	"rose pine from midnight-discord"				:	"'https://raw.githubusercontent.com/refact0r/midnight-discord/refs/heads/master/themes/flavors/midnight-rose-pine.theme.css'",
+	"rose pine moon from midnight-discord"			:	"'https://raw.githubusercontent.com/refact0r/midnight-discord/refs/heads/master/themes/flavors/midnight-rose-pine-moon.theme.css'",
+	"tokyo night from midnight-discord"				:	"'https://raw.githubusercontent.com/refact0r/midnight-discord/refs/heads/master/themes/flavors/midnight-tokyo-night.theme.css'",
+	"lilypichu from midnight-discord"				:	"'https://raw.githubusercontent.com/refact0r/midnight-discord/refs/heads/master/themes/flavors/midnight-lilypichu.theme.css'",
+	"vencord from midnight-discord"					:	"'https://raw.githubusercontent.com/refact0r/midnight-discord/refs/heads/master/themes/flavors/midnight-vencord.theme.css'",
+}
+
+@var text		_background-image-url			"background-image-url Important: It must be enclosed in single quotes." 					"'https://refact0r.github.io/midnight-discord/assets/iceland.jpg'"
+
+@var checkbox 	_server-folder-icon				"Server Folder Icon" 					1
+@var checkbox 	_BubbleUsernames				"BubbleUsernames by yiruzu"				1
+@var checkbox 	_delete-chatbox-gift			"Delete Gift Button in Chatbox"			1
+@var checkbox 	_delete-chatbox-sticker			"Delete Sticker Button in Chatbox"		1
+@var checkbox 	_delete-chatbox-app-launcher	"Delete App Launcher Button in Chatbox"	1
+@var checkbox 	_delete-avatar-decoration		"Delete Avatar Decoration"				1
+@var checkbox 	_delete-nameplate				"Delete Nameplate"						1
+@var checkbox 	_delete-profile-effects			"Delete Profile Effects"				1
+@var checkbox 	_delete-display-name-style		"Delete Display Name Style"				1
+@var checkbox 	_delete-audio-button-menu		"Delete audioButton menu"				1
+@var checkbox 	_delete-download-app-button		"Delete Download Apps Button"			1
+@var checkbox 	_delete-contextmenu-bookmark	"Delete Bookmark Button in Contextmenu"	1
+@var checkbox 	_delete-contextmenu-apps		"Delete Apps Button in Contextmenu"		1
+@var checkbox 	_delete-contextmenu-tts			"Delete TTS Button in Contextmenu"		1
+
 ==/UserStyle== */
 @-moz-document domain("discord.com") {
-	@import url(https://raw.githubusercontent.com/ymnk11/discord-custom-theme/refs/heads/main/module/midnight-discord/midnight-discord.css);
+	@import url(_flavor);
 
 	if _server-folder-icon {
 		@import url(https://raw.githubusercontent.com/ymnk11/discord-custom-theme/refs/heads/main/module/server-folder.css);
@@ -149,5 +190,9 @@
 		#message-actions-tts {
 			display: none;
 		}
+	}
+
+	body {
+		--background-image-url: url(_background-image-url);
 	}
 }
