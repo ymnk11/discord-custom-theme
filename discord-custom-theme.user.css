@@ -43,6 +43,7 @@
 	"vencord from midnight-discord"					:	"'https://raw.githubusercontent.com/refact0r/midnight-discord/refs/heads/master/themes/flavors/midnight-vencord.theme.css'",
 }
 
+@var checkbox	_custom-background-image		"Csutom Background Image"				1
 @var text		_background-image-url			"background-image-url Important: It must be enclosed in single quotes." 					"'https://refact0r.github.io/midnight-discord/assets/iceland.jpg'"
 
 @var checkbox 	_server-folder-icon				"Server Folder Icon" 					1
@@ -203,7 +204,9 @@
 		}
 	}
 
-	body {
-		--background-image-url: url(_background-image-url);
+	if _custom-background-image {
+		body {
+			--background-image-url: url(_background-image-url);
+		}
 	}
 }
