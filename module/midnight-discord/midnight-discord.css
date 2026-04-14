@@ -48,6 +48,11 @@ body {
   --trailing-right: calc(var(--gap) + var(--border-thickness) + 8px + 4px + 244px + 4px + var(--space-xs));
 }
 
+/* 検索ボックス */
+.visual-refresh .toolbar__9293f {
+  padding-right: 0;
+}
+
 .headerBar__8a7fc {
   padding-right: var(--space-sm);
 }
