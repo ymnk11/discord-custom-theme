@@ -44,43 +44,5 @@ body {
 }
 
 /* --- Inboxや検索ボックスなど --- */
-body {
-  --trailing-right: calc(var(--gap) + var(--border-thickness) + 8px + 4px + 244px + 4px + var(--space-xs));
-}
 
-/* 検索ボックス */
-.visual-refresh .toolbar__9293f {
-  padding-right: 0;
-}
-
-.headerBar__8a7fc {
-  padding-right: var(--space-sm);
-}
-
-/* テキストチャンネル */
-.container__5e434 > .base__5e434:has(.chat_f75fb0) {
-  --trailing-right: calc(var(--gap) + var(--border-thickness) + 8px + 4px + 244px + 4px + var(--space-xs) + 32px + var(--space-xs));
-  & .chat_f75fb0 .toolbar__9293f > .iconWrapper__9293f:nth-last-of-type(3) {
-    margin-right: calc(var(--space-xs) + 32px);
-  }
-}
-
-/* テキストチャット + スレッド(スプリットビュー)*/
-.container__5e434 > .base__5e434:has(.chat_f75fb0.threadSidebarOpen_f75fb0) {
-  --trailing-right: calc(var(--gap) + var(--gap) + var(--border-thickness) + 32px + var(--gap));
-  & .chat_f75fb0 .toolbar__9293f > .iconWrapper__9293f:nth-last-of-type(3) {
-    margin-right: 0px;
-  }
-}
-
-/* ボイスチャンネル */
-.container__5e434 > .base__5e434:has(.chat_f75fb0 > .noChat_cb9592 > .callContainer_cb9592) {
-  --trailing-right: calc(var(--gap) + var(--gap) + var(--border-thickness) + 32px + var(--gap));
-}
-
-/* Inbox */
-.visual-refresh #app-mount .base__5e434 .trailing_c38106 {
-  right: var(--trailing-right);
-  padding-right: unset;
-}
 /* --- Inboxや検索ボックスなど --- */
