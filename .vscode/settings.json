@@ -1,0 +1,17 @@
+{
+	"cSpell.words": [
+		"chatbox",
+		"contextmenu",
+		"nameplated__",
+		"openstyles",
+		"Popout",
+		"refact0r",
+		"toon_",
+		"upsell",
+		"yiruzu"
+	],
+	"files.associations": {
+		"*.user.css": "usercss",
+		"*.css": "css"
+	}
+}
